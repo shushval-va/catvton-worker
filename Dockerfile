@@ -14,3 +14,7 @@ RUN huggingface-cli download zhengchong/CatVTON \
 # Pre-download SD 1.5 Inpainting base model (~4.3GB) required by CatVTON pipeline
 RUN huggingface-cli download runwayml/stable-diffusion-inpainting \
     --local-dir /comfyui/models/CatVTON/stable-diffusion-inpainting
+
+# Pre-download VAE (sd-vae-ft-mse) required by CatVTON pipeline
+RUN huggingface-cli download stabilityai/sd-vae-ft-mse \
+    --local-dir /comfyui/models/CatVTON/sd-vae-ft-mse
